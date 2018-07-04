@@ -297,10 +297,10 @@ __inline static void rtw_list_delete(_list *plist)
 
 __inline static void _init_timer(_timer *ptimer, _nic_hdl nic_hdl, void *pfunc, void *cntx)
 {
-	/* setup_timer(ptimer, pfunc,(u32)cntx);	 */
-	ptimer->function = pfunc;
-	ptimer->data = (unsigned long)cntx;
-	init_timer(ptimer);
+	 setup_timer(ptimer, pfunc,(u32)cntx);
+//	ptimer->function = pfunc;
+//	ptimer->data = (unsigned long)cntx;
+//	init_timer(ptimer);
 }
 
 __inline static void _set_timer(_timer *ptimer, u32 delay_time)
